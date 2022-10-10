@@ -17,3 +17,17 @@ function validateEmail( ) {
     emailError.innerHTML = '<i class="fa-solid fa-circle-check"></i>';
     return true;
 }
+console.log("Copilot AI is awesome!");
+
+// display random image function
+const randomImage = new Array();
+randomImage[0] = "https://picsum.photos/200/300";
+randomImage[1] = "https://picsum.photos/200";
+randomImage[2] = "https://picsum.photos/200/300";
+randomImage[3] = "https://picsum.photos/200";
+
+for (var i = 0; i < randomImage.length; i++) {
+    var random = Math.floor(Math.random() * randomImage.length);
+    document.getElementById("random-image").src = randomImage[random];
+}
+conole.log("Copilot AI is awesome!");

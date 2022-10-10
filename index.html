@@ -10,6 +10,9 @@
 </head>
 <body>
     <div class="container">
+        <div>
+            <h1>Random Image Generator</h1>
+        </div>
         <form>
             <div class="input">
                 <label>Email</label>
@@ -17,11 +20,13 @@
                 <span id="email-error"></span>
             </div>  
             <div>
-                <button onclick="loadImage()">Get your random photo</button>
-                <span id="image-error"></span>
-            </div> 
-            <script src="script.js"></script>  
+                <button onclick="getRandomImage()">Generate Image</button>
+                <span id="result"></span>
+            </div>  
         </form>
+        <br><br>
+        <img id="random-image" class="random">
     </div>
+    <script src="script.js"></script> 
 </body>
 </html>
