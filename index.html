@@ -10,7 +10,7 @@
 </head>
 <body>
     <div class="container">
-        <div>
+        <div class="header">
             <h1>Random Image Generator</h1>
         </div>
         <form>
@@ -20,12 +20,14 @@
                 <span id="email-error"></span>
             </div>  
             <div>
-                <button onclick="getRandomImage()">Generate Image</button>
+                <button onclick="validateSubmit()">Generate Image</button>
                 <span id="result"></span>
             </div>  
         </form>
         <br><br>
-        <img id="random-image" class="random">
+        <div class="image">
+            <img id="random-image" alt="random image generated" class="random">
+        </div>
     </div>
     <script src="script.js"></script> 
 </body>

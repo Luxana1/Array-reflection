@@ -2,6 +2,7 @@
 // email validate function
 var emailError = document.getElementById("email-error");
 var imageError = document.getElementById("image-error");
+var submitError = document.getElementById("result");
 
 function validateEmail( ) {
     var email = document.getElementById("contact-email").value;
@@ -19,15 +20,22 @@ function validateEmail( ) {
 }
 console.log("Copilot AI is awesome!");
 
+function validateSubmit() {
+    if (validateEmail()) {
+        return true;
+    }
+    return false;
+}
+
 // display random image function
 const randomImage = new Array();
 randomImage[0] = "https://picsum.photos/200/300";
 randomImage[1] = "https://picsum.photos/200";
-randomImage[2] = "https://picsum.photos/200/300";
-randomImage[3] = "https://picsum.photos/200";
+randomImage[2] = "https://picsum.photos/seed/picsum/200/300";
+randomImage[3] = "https://picsum.photos/200/300?grayscale";
 
 for (var i = 0; i < randomImage.length; i++) {
     var random = Math.floor(Math.random() * randomImage.length);
     document.getElementById("random-image").src = randomImage[random];
 }
-conole.log("Copilot AI is awesome!");
+console.log("Copilot AI is awesome!");
