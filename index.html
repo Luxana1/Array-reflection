@@ -13,22 +13,24 @@
         <div class="header">
             <h1>Random Image Generator</h1>
         </div>
-        <form>
-            <div class="input">
-                <label>Email</label>
-                <input type="email" placeholder="Enter Email" id="contact-email" onkeyup="validateEmail()">
-                <span id="email-error"></span>
-            </div>  
-            <div>
-                <button onclick="validateSubmit()">Generate Image</button>
-                <span id="result"></span>
-            </div>  
-        </form>
-        <br><br>
-        <div class="image">
-            <img id="random-image" alt="random image generated" class="random">
+        <div class="main-container">
+            <form>
+                <div class="input">
+                    <label>Email</label>
+                    <input type="email" placeholder="Enter Email" id="contact-email" onkeyup="validateEmail()">
+                    <span id="email-error"></span>
+                </div>  
+                <div>
+                    <button onclick="validateSubmit()">Generate Image</button>
+                    <span id="result"></span>
+                </div>  
+            </form>
+            <br><br>
+            <div class="image">
+                <img id="random-image" alt="random image generated" class="random">
+            </div>
         </div>
-    </div>
+        </div>
     <script src="script.js"></script> 
 </body>
 </html>
