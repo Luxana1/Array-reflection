@@ -18,7 +18,6 @@ function validateEmail( ) {
     emailError.innerHTML = '<i class="fa-solid fa-circle-check"></i>';
     return true;
 }
-console.log("Copilot AI is awesome!");
 
 function validateSubmit() {
     if (validateEmail()) {
@@ -38,4 +37,9 @@ for (var i = 0; i < randomImage.length; i++) {
     var random = Math.floor(Math.random() * randomImage.length);
     document.getElementById("random-image").src = randomImage[random];
 }
-console.log("Copilot AI is awesome!");
+
+// function that change image when click on the button 
+function changeRandomImage() {
+    var random = Math.floor(Math.random() * randomImage.length);
+    document.getElementById("random-image").src = randomImage[random];
+}

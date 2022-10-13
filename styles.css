@@ -1,3 +1,12 @@
+/* As discussed in the meeting, it looks like you are making good progress on the arrays reflection - keep up the good work.
+My initial feedback was:
+- reorder so the image is above the input field and the button
+- add another button, so you have two - "Generate a new image" and "Assign image"
+Generate will action the API call and update the image displayed on the site
+Assign will assign the image to the email address given
+- look into the issue with the page flickering on button press, you want to use JavaScript to update HTML elements rather than reloading the page */
+
+/* General body styling */
 body {
     background-color: rgb(51, 50, 50);
 }
@@ -11,6 +20,7 @@ body {
     margin: -8px;
 }
 
+/* Header */
 .header {
     background-color: rgb(168 169 171);
     width: 100%;
@@ -20,16 +30,25 @@ body {
     justify-content: center;
     align-items: center;
 }
+h1 {
+    color: rgb(51, 50, 50);
+    text-align: center;
+}
 
-
+/* Main styling and background for every screen devices */
 .main-container {
     background-image: url(./img/triangles.png);
     background-position: top;
-    background-position-y: -145px;
+    background-position-y: -78px;
     background-repeat: no-repeat;
     background-size: 100%;
     width: 100%;
     height: 100%;
+}
+@media  screen and (min-width: 576px) {
+    .main-container {
+        background-position-y: -145px;
+    }
 }
 @media  screen and (min-width: 768px) {
     .main-container {
@@ -47,17 +66,13 @@ body {
     }
 }
 
-h1 {
-    color: rgb(51, 50, 50);
-    text-align: center;
-}
-
+/* Form general styling */
 form {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 25px 20px;
+    padding: 5px 20px;
 }
 
 .input {
@@ -68,7 +83,7 @@ form {
     margin: 10px 0;
     position: relative;
 }
-
+/* Email */
 label {
     color: white;
     font-size: 1.5rem;
@@ -90,7 +105,7 @@ label {
     color: rgb(180, 178, 178);
     padding-left: 10px;
 }
-
+/* Error messages and success icons*/
 .input span {
     position: absolute;
     bottom: 12px;
@@ -104,8 +119,10 @@ label {
 .input span i {
     color: seagreen;
 }
+
+/* Submit button */
 .button-top {
-    margin: 26px 0;
+    margin-bottom: 26px;
 }
 button {
     background-color: rgb(101, 100, 100);
@@ -123,7 +140,9 @@ button:hover {
     cursor: pointer;
 }
 
+/* Image and its position */
 .image {
+    margin: 45px 0 5px;
     width: 100%;
     height: 100%;
     display: flex;

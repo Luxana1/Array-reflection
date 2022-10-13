@@ -14,6 +14,9 @@
             <h1>Random Image Generator</h1>
         </div>
         <div class="main-container">
+            <div class="image">
+                <img id="random-image" alt="random image generated" class="random">
+            </div>
             <form>
                 <div class="input">
                     <label>Email</label>
@@ -21,13 +24,14 @@
                     <span id="email-error"></span>
                 </div>  
                 <div class="button-top">
-                    <button onclick="validateSubmit()">Generate Image</button>
+                    <button onclick="validateSubmit(); changeRandomImage()">Generate a new image</button>
                     <span id="result"></span>
-                </div>  
+                </div> 
+                <div class="button-bottom">
+                    <button onclick="getRandomImage()">Assign image</button>
+                    <span id="result"></span>
+                </div> 
             </form>
-            <div class="image">
-                <img id="random-image" alt="random image generated" class="random">
-            </div>
         </div>
     </div>
     <script src="script.js"></script> 
